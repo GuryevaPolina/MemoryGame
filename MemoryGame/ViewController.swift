@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var scoreTitle: UILabel!
+    var score = 0
+    
     var firstCard: Card? = nil
     var secondCard: Card? = nil
     var cards: [Card] = []
@@ -23,11 +26,96 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        initCards()
+        cardsLayout()
+        shuffle()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func cardWasChosen(_ sender: Card) {
+        
+        sender.setImage(sender.backgroundImage(for: .normal), for: .normal)
+        
+        if firstCard == nil {
+            firstCard = sender
+        } else {
+            secondCard = sender
+            score += 1
+        }
+        
+        if let first = firstCard {
+            if let second = secondCard {
+                if first.backgroundImage(for: .normal) != second.backgroundImage(for: .normal) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
+                        first.setImage(self.backSideImage, for: .normal)
+                        second.setImage(self.backSideImage, for: .normal)
+                    })
+                } else {
+                    first.isEnabled = false
+                    first.wasFounded = true
+                    second.isEnabled = false
+                    second.wasFounded = true
+                }
+                firstCard = nil
+                secondCard = nil
+            }
+        }
+        
+        if gameFinished() {
+            let alert = UIAlertController(title: "Congratulation", message: "Your result is \(score)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "New game!", style: .default, handler:  { action in
+                self.newGame();
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        scoreTitle.text = "Score: \(score)"
+    }
+    
+    func newGame() {
+        score = 0
+        for card in cards {
+            card.setImage(backSideImage!, for: .normal)
+            card.isEnabled = true
+            card.wasFounded = false
+        }
+        shuffle()
+    }
+    
+    func gameFinished() -> Bool {
+        for card in cards {
+            if !card.wasFounded {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func initCards() {
         for name in cardNames {
             cards.append(Card(image: backSideImage!, backgroundImage: UIImage(named: name)!))
             cards.append(Card(image: backSideImage!, backgroundImage: UIImage(named: name)!))
         }
+    }
+    
+    func shuffle() {
         
+        for _ in 0..<cards.count {
+            let first = Int(arc4random_uniform(UInt32(cards.count)))
+            let second = Int(arc4random_uniform(UInt32(cards.count)))
+            
+            if first != second {
+                let bufImage = cards[first].backgroundImage(for: .normal)
+                cards[first].setBackgroundImage(cards[second].backgroundImage(for: .normal), for: .normal)
+                cards[second].setBackgroundImage(bufImage, for: .normal)
+            }
+        }
+    }
+    
+    func cardsLayout() {
         let offsetBeetwenCardsW: CGFloat = self.view.frame.width / 25.0
         let offsetBeetwenCardsH: CGFloat = self.view.frame.height / 25.0
         
@@ -45,52 +133,6 @@ class ViewController: UIViewController {
                                                                 height: (backSideImage?.size.height)!)
                 cards[i * COUNT_CARD_IN_ROW + j].addTarget(self, action: #selector(cardWasChosen(_:)), for: .touchUpInside)
                 view.addSubview(cards[i * COUNT_CARD_IN_ROW + j])
-            }
-        }
-        shuffle()
-    }
-    
-    func shuffle() {
-        
-        for _ in 0..<cards.count {
-            let first = Int(arc4random_uniform(UInt32(cards.count)))
-            let second = Int(arc4random_uniform(UInt32(cards.count)))
-        
-            //print("\(first) \(second)")
-        
-            if first != second {
-                let bufImage = cards[first].backgroundImage(for: .normal)
-                cards[first].setBackgroundImage(cards[second].backgroundImage(for: .normal), for: .normal)
-                cards[second].setBackgroundImage(bufImage, for: .normal)
-            }
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func cardWasChosen(_ sender: Card) {
-        
-        sender.setImage(sender.backgroundImage(for: .normal), for: .normal)
-        
-        if firstCard == nil {
-            firstCard = sender
-        } else {
-            secondCard = sender
-        }
-        
-        if let first = firstCard {
-            if let second = secondCard {
-                if first.backgroundImage(for: .normal) != second.backgroundImage(for: .normal) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
-                        first.setImage(self.backSideImage, for: .normal)
-                        second.setImage(self.backSideImage, for: .normal)
-                    })
-                }
-                firstCard = nil
-                secondCard = nil
             }
         }
     }

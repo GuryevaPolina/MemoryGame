@@ -13,10 +13,6 @@ class Card: UIButton {
     
     var wasFounded: Bool = false
     
-    func pairWasFounded() {
-        self.wasFounded = true
-    }
-    
     init(image: UIImage, backgroundImage: UIImage) {
         super.init(frame: .zero)
         self.setImage(image, for: .normal)
