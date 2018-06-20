@@ -13,6 +13,16 @@
 		9FEC425120DA5B9000B484A0 /* MemoryGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FEC424F20DA5B9000B484A0 /* MemoryGame.xcdatamodeld */; };
 		9FEC425320DA5B9300B484A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC425220DA5B9300B484A0 /* Assets.xcassets */; };
 		9FEC425620DA5B9300B484A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC425420DA5B9300B484A0 /* LaunchScreen.storyboard */; };
+		9FEC425E20DA5BCD00B484A0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEC425D20DA5BCD00B484A0 /* Card.swift */; };
+		9FEC426B20DA5D5900B484A0 /* card1-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426220DA5D5800B484A0 /* card1-1.jpg */; };
+		9FEC426C20DA5D5900B484A0 /* card2-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426320DA5D5800B484A0 /* card2-1.jpg */; };
+		9FEC426D20DA5D5900B484A0 /* back_side.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426420DA5D5800B484A0 /* back_side.jpg */; };
+		9FEC426E20DA5D5900B484A0 /* card4-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426520DA5D5800B484A0 /* card4-1.jpg */; };
+		9FEC426F20DA5D5900B484A0 /* card8-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426620DA5D5800B484A0 /* card8-1.jpg */; };
+		9FEC427020DA5D5900B484A0 /* card5-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426720DA5D5900B484A0 /* card5-1.jpg */; };
+		9FEC427120DA5D5900B484A0 /* card3-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426820DA5D5900B484A0 /* card3-1.jpg */; };
+		9FEC427220DA5D5900B484A0 /* card6-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426920DA5D5900B484A0 /* card6-1.jpg */; };
+		9FEC427320DA5D5900B484A0 /* card7-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC426A20DA5D5900B484A0 /* card7-1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		9FEC425220DA5B9300B484A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FEC425520DA5B9300B484A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FEC425720DA5B9300B484A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FEC425D20DA5BCD00B484A0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		9FEC426220DA5D5800B484A0 /* card1-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card1-1.jpg"; path = "MemoryGame/Assets.xcassets/Chrismas_pack/card1-1.jpg"; sourceTree = SOURCE_ROOT; };
+		9FEC426320DA5D5800B484A0 /* card2-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card2-1.jpg"; path = "MemoryGame/Assets.xcassets/Chrismas_pack/card2-1.jpg"; sourceTree = SOURCE_ROOT; };
+		9FEC426420DA5D5800B484A0 /* back_side.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = back_side.jpg; path = MemoryGame/Assets.xcassets/Chrismas_pack/back_side.jpg; sourceTree = SOURCE_ROOT; };
+		9FEC426520DA5D5800B484A0 /* card4-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card4-1.jpg"; path = "MemoryGame/Assets.xcassets/Chrismas_pack/card4-1.jpg"; sourceTree = SOURCE_ROOT; };
+		9FEC426620DA5D5800B484A0 /* card8-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card8-1.jpg"; path = "MemoryGame/Assets.xcassets/Chrismas_pack/card8-1.jpg"; sourceTree = SOURCE_ROOT; };
+		9FEC426720DA5D5900B484A0 /* card5-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card5-1.jpg"; path = "MemoryGame/Assets.xcassets/Chrismas_pack/card5-1.jpg"; sourceTree = SOURCE_ROOT; };
+		9FEC426820DA5D5900B484A0 /* card3-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card3-1.jpg"; path = "MemoryGame/Assets.xcassets/Chrismas_pack/card3-1.jpg"; sourceTree = SOURCE_ROOT; };
+		9FEC426920DA5D5900B484A0 /* card6-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card6-1.jpg"; path = "MemoryGame/Assets.xcassets/Chrismas_pack/card6-1.jpg"; sourceTree = SOURCE_ROOT; };
+		9FEC426A20DA5D5900B484A0 /* card7-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card7-1.jpg"; path = "MemoryGame/Assets.xcassets/Chrismas_pack/card7-1.jpg"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 		9FEC424720DA5B8F00B484A0 /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				9FEC426120DA5D3400B484A0 /* ChrismasPack */,
 				9FEC424820DA5B8F00B484A0 /* AppDelegate.swift */,
 				9FEC424A20DA5B9000B484A0 /* ViewController.swift */,
 				9FEC424C20DA5B9000B484A0 /* Main.storyboard */,
@@ -63,8 +84,25 @@
 				9FEC425420DA5B9300B484A0 /* LaunchScreen.storyboard */,
 				9FEC425720DA5B9300B484A0 /* Info.plist */,
 				9FEC424F20DA5B9000B484A0 /* MemoryGame.xcdatamodeld */,
+				9FEC425D20DA5BCD00B484A0 /* Card.swift */,
 			);
 			path = MemoryGame;
+			sourceTree = "<group>";
+		};
+		9FEC426120DA5D3400B484A0 /* ChrismasPack */ = {
+			isa = PBXGroup;
+			children = (
+				9FEC426420DA5D5800B484A0 /* back_side.jpg */,
+				9FEC426220DA5D5800B484A0 /* card1-1.jpg */,
+				9FEC426320DA5D5800B484A0 /* card2-1.jpg */,
+				9FEC426820DA5D5900B484A0 /* card3-1.jpg */,
+				9FEC426520DA5D5800B484A0 /* card4-1.jpg */,
+				9FEC426720DA5D5900B484A0 /* card5-1.jpg */,
+				9FEC426920DA5D5900B484A0 /* card6-1.jpg */,
+				9FEC426A20DA5D5900B484A0 /* card7-1.jpg */,
+				9FEC426620DA5D5800B484A0 /* card8-1.jpg */,
+			);
+			path = ChrismasPack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +164,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FEC425620DA5B9300B484A0 /* LaunchScreen.storyboard in Resources */,
+				9FEC427220DA5D5900B484A0 /* card6-1.jpg in Resources */,
 				9FEC425320DA5B9300B484A0 /* Assets.xcassets in Resources */,
+				9FEC427020DA5D5900B484A0 /* card5-1.jpg in Resources */,
+				9FEC427120DA5D5900B484A0 /* card3-1.jpg in Resources */,
+				9FEC427320DA5D5900B484A0 /* card7-1.jpg in Resources */,
+				9FEC426F20DA5D5900B484A0 /* card8-1.jpg in Resources */,
+				9FEC426C20DA5D5900B484A0 /* card2-1.jpg in Resources */,
+				9FEC426E20DA5D5900B484A0 /* card4-1.jpg in Resources */,
+				9FEC426D20DA5D5900B484A0 /* back_side.jpg in Resources */,
 				9FEC424E20DA5B9000B484A0 /* Main.storyboard in Resources */,
+				9FEC426B20DA5D5900B484A0 /* card1-1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +188,7 @@
 				9FEC424B20DA5B9000B484A0 /* ViewController.swift in Sources */,
 				9FEC424920DA5B8F00B484A0 /* AppDelegate.swift in Sources */,
 				9FEC425120DA5B9000B484A0 /* MemoryGame.xcdatamodeld in Sources */,
+				9FEC425E20DA5BCD00B484A0 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
