@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         initCards()
         cardsLayout()
         shuffle()
@@ -77,6 +79,7 @@ class ViewController: UIViewController {
     
     func newGame() {
         score = 0
+        scoreTitle.text = "Score: \(score)"
         for card in cards {
             card.setImage(backSideImage!, for: .normal)
             card.isEnabled = true
